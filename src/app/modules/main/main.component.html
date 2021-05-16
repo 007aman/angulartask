@@ -1,0 +1,36 @@
+<mat-drawer-container class="example-container" autosize fxFill>
+  <mat-drawer #drawer mode="side" [(opened)]="drawerNav">
+    <div fxLayout="column" fxFlex="300px">
+      <div fxLayout="row" fxLayoutAlign="center center" padding>
+        <!-- <img src="../../../assets/icons/logo_light.png" width="130px"> -->
+      </div>
+      <mat-accordion>
+        <mat-expansion-panel expanded>
+          <mat-expansion-panel-header [ngClass]="['customExpansion']" >
+            <mat-panel-title>
+             menu
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxLayout="column" fxFlex="100" bgWhite>
+            <ul fxLayoutGap="20px" fxLayout="column" >
+              <li *ngFor="let menu of menus" titleLg [routerLink]="menu.route">{{menu.name}}</li>
+            </ul>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-drawer>
+
+  <div fxLayout="column" fxFlex="100">
+    <mat-toolbar bgWhite fxLayoutAlign="space-between">
+      <button type="button" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>notes</mat-icon>
+      </button>
+      <button type="button" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+[bgBase] {
+  background-color: #001b30;
+}
+.customExpansion {
+  background-color: #001b30;
+  *, ::after, &:hover, .mat-expansion-panel-header .mat-expanded:focus, .mat-expansion-panel-header:hover {
+    color: #fff !important;
+    background: #001b30 !important;
+  }
+}
+[baseColor] {
+  color: #001b30;
+}
+[padding] {
+  padding: 12px;
+}
+[bgWhite] {
+  background: white;
+}
+[titleXl] {
+  font-size: 48px;
+  font-weight: 500;
+}
+[titleLg] {
+  font-size: 18px;
+  font-weight: 400;
+}
+[titleLgDark] {
+  font-size: 18px;
+  font-weight: 500;
+  color: #001b30;
+}
+[routerlink] {
+  cursor: pointer;
+}
+[customBtn] {
+  background-color: #001b30;
+  color: white;
+  border-radius: 25px !important;
+  height: 50px;
+  font-size: 22px;
+  min-width: 200px !important;
+}
+[customBtnSm] {
+  background-color: #001b30;
+  color: white;
+  border-radius: 20px !important;
+  height: 40px;
+  font-size: 14px;
+  min-width: 100px !important;
+}
+mat-form-field {
+  width: 100%;
+  font-size: 18px !important;
+}
+mat-label {
+  //font-weight: bold;
+  color: #000 !important;
+}
+mat-toolbar {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
